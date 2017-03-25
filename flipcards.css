@@ -1,0 +1,54 @@
+.body {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    perspective: 1000px;
+}
+
+.wrapper:hover .flip-card, .wrapper.hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.wrapper, .front, .back {
+    width: 350px;
+    height: 500px;
+}
+
+.flip-card {
+    transition: 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    background-color: aqua;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: mediumpurple;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
