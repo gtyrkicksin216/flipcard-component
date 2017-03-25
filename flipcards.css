@@ -1,6 +1,9 @@
 /* GIVES THE ILLUSION OF DEPTH ON THE Z-AXIS */
 .wrapper {
     perspective: 1000px;
+    -webkit-prespective: 1000px;
+    -moz-prespective: 1000px;
+    -o-prespective: 1000px;
 }
 
 /* TELLS TEH CARD WHAT TO DO WHEN HOVERED OVER */
@@ -24,6 +27,9 @@
 /* CONTROLS WHAT YOU SEE WHEN THE CARD IS FLIPPED */
 .front, .back {
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -38,6 +44,10 @@
 
 .back {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
     background-color: mediumpurple;
 }
 
