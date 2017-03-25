@@ -1,27 +1,27 @@
-.body {
-    width: 90%;
-    margin: 0 auto;
-}
-
+/* GIVES THE ILLUSION OF DEPTH ON THE Z-AXIS */
 .wrapper {
     perspective: 1000px;
 }
 
+/* TELLS TEH CARD WHAT TO DO WHEN HOVERED OVER */
 .wrapper:hover .flip-card, .wrapper.hover .flip-card {
     transform: rotateY(180deg);
 }
 
+/* FIXED HEIGHT AND WIDTH FOR EXAMPLE, CAN BE ADJUSTED ACCORDINGLY */
 .wrapper, .front, .back {
     width: 350px;
     height: 500px;
 }
 
+/* CONTROLS THE SPEED AND STYLE OF THE CARD'S ANIMATION */
 .flip-card {
-    transition: 0.8s;
+    transition: 1s;
     transform-style: preserve-3d;
     position: relative;
 }
 
+/* CONTROLS WHAT YOU SEE WHEN THE CARD IS FLIPPED */
 .front, .back {
     backface-visibility: hidden;
     position: absolute;
@@ -29,6 +29,7 @@
     left: 0;
 }
 
+/* PLACES THE FRONT CARD 'ON TOP' OF THE BACK CARD */
 .front {
     z-index: 2;
     transform: rotateY(0deg);
